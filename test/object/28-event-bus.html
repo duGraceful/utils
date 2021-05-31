@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../src/object/event-bus.js"></script>
+</head>
+<body>
+    <script>
+        eventBus.on('login', (data) => {
+            console.log(data+'登陆');})
+        eventBus.on('login', (data) => {
+            console.log(data+'登陆数据写入');
+        });
+
+        // setTimeout(() => {
+        //     eventBus.emit('login', '张三')
+        // }, 2000);
+        // 可不传入参
+        eventBus.off('login');
+    </script>
+</body>
+</html>
+

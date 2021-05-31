@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../src/array/find.js"></script>
+    <script src="../../src/array/drop.js"></script>
 </head>
 <body>
     <script>
-        const arr = [1,2,3,4,5];
-        const result = find(arr, (item) => item > 2)
-        console.log(result);
+        const arr = [1,2,3,4,5,6];
+        const result = drop(arr, 1)
+        const result1 = dropRight(arr, 3)
+        console.log(result, result1);
     </script>
-    
 </body>
 </html>

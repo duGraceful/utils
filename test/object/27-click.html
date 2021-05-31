@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../src/object/click.js"></script>
+</head>
+<body>
+    <div id="outer">
+        <diV id="inner"></diV>
+    </div>
+    <ul id="items">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+    </ul>
+    <script>
+        // 补货元素
+        let outter = document.querySelector('#outer');
+        let inner = document.querySelector('inner');
+        outter.addEventListener('click', function(){
+            console.log('捕获 outter');
+        }, true);
+        
+        inner.addEventListener('click', function(){
+            console.log('捕获 inner');
+        }, true);
+
+        outter.addEventListener('click', function(){
+            console.log('冒泡 outter');
+        });
+        
+        inner.addEventListener('click', function(){
+            console.log('冒泡 inner');
+        });
+
+
+        addEventListener("#item", 'click', function(){
+            console.log(this.innerHtml);
+        }, 'li')
+
+    </script>
+</body>
+</html>

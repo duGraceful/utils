@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../src/function/call.js"></script>
+    <script src="../../src/function/apply.js"></script>
 </head>
 <body>
     <script>
@@ -21,9 +21,9 @@
         // 添加一个全局属性
         window.c = 1314;
 
-        // 执行call函数
-        console.log(call(add, obj, 10, 20));
-        console.log(call(add, null, 30, 40));
+        // 执行函数
+        console.log(apply(add, obj, [10, 20]));
+        console.log(apply(add, null, [30, 40]));
     </script>
 </body>
 </html>

@@ -5,16 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../src/function/debounce.js"></script>
+    <script src="../../src/array/pull.js"></script>
 </head>
 <body>
-    <input type="text" />
     <script>
-        let input = document.querySelector('input');
-        input.onkeydown = debounce(function (e) {
-            console.log(e.keyCode);
-        }, 500)
+        const arr = [1,3,5,3,7];
+        const arr3 = [1,3,5,3,7];
+        const arr2 = [2,7,3,7];
+        const result = pull(arr, ...arr2)
+        const result1 = pullAll(arr3, arr2)
+        console.log(arr, result, result1);
     </script>
-    
 </body>
 </html>

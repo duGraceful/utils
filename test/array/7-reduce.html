@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../src/array/filter.js"></script>
+    <script src="../../src/array/reduce.js"></script>
 </head>
 <body>
     <script>
         const arr = [1,2,3,4,5];
-        const result = filter(arr, (item) => item % 2 === 1)
+        const result = reduce(arr, (res, value) => {
+            return res + value;
+        }, 0)
         console.log(result);
     </script>
     

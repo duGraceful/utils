@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="../src/array/concat.js"></script>
+    <script src="../../src/array/map.js"></script>
 </head>
 <body>
     <script>
-        const arr = [1,2,3,4,5,1,2];
-        const arr2 = [{1: 1},2,3,4,5,1,2];
-        const result = concat(arr, arr2, [66, 99])
+        const arr = [1,2,3,4,5];
+        const result = map(arr, item => {
+            return item * 10;
+        })
         console.log(result);
     </script>
+    
 </body>
 </html>

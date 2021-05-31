@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../src/object/pubsub.js"></script>
+</head>
+<body>
+    <script>
+        // 订阅一个频道
+        PubSub.subscribe('pay', data => {
+            console.log('商家 开始');
+        });
+        PubSub.subscribe('pay', data => {
+            console.log('骑手 开始');
+        });
+
+        console.log('PubSub', PubSub);
+
+        // 发布消息
+        // PubSub.publish('pay', {
+        //     title: 'hahahh',
+        //     price: 25,
+        //     pos: 'tetttet'
+        // })
+
+
+    </script>
+</body>
+</html>
+
